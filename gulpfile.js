@@ -77,6 +77,7 @@ gulp.task('render', ['html', 'css', 'js', 'fonts', 'images']);
 gulp.task('default', ['clean', 'render', 'watch'], function() {
     gulp.src('./dist')
       .pipe(webserver({
+        host: '0.0.0.0',
         fallback: 'index.html',
         livereload: true
     }));
